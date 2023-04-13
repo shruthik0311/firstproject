@@ -1,0 +1,19 @@
+input_str = "this is a program experiment for fun in python"
+char_count = {}
+output_str = ""
+
+for char in input_str:
+    if char.isalpha():
+        count = char_count.get(char, 0)
+        next_char = chr(ord(char) + count)
+        output_str += next_char
+        char_count[char] = count + 1
+    else:
+        output_str += char
+        continue
+
+    if char.isalpha():
+        char_count[char] = char_count.get(char, 0) 
+
+print(char_count)
+print(output_str)
